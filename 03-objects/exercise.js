@@ -30,7 +30,6 @@ export function productName(product) {
  * @returns {*} whatever is stored under that key
  */
 export function getField(product, field) {
-  // TODO: the key is in a variable, so a dot will not work here.
   return product[field];
 }
 
@@ -72,6 +71,5 @@ export function summarize(product) {
  * @returns {object} a new product, with every other key the same
  */
 export function withPrice(product, newPrice) {
-  // TODO: spread the old product, then override price.
   return { ...product, price: newPrice };
 }
