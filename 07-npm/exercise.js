@@ -19,8 +19,7 @@ import dayjs from "dayjs";
  * @returns {string} the same date as DD/MM/YYYY
  */
 export function formatDate(dateString) {
-  // TODO: dayjs(dateString), then .format() with the right pattern.
-  throw new Error("formatDate is not written yet");
+  return dayjs(dateString).format("DD/MM/YYYY");
 }
 
 /**
@@ -31,8 +30,7 @@ export function formatDate(dateString) {
  * @returns {number}
  */
 export function yearOf(dateString) {
-  // TODO: dayjs has a method for exactly this. It returns a number.
-  throw new Error("yearOf is not written yet");
+  return dayjs(dateString).year();
 }
 
 /**
@@ -51,16 +49,20 @@ export function yearOf(dateString) {
  */
 
 // TODO: write addDays here.
+export function addDays(dateString, days) {
+  return dayjs(dateString).add(days, "day").format("YYYY-MM-DD");
+}
 
 /**
  * The package YOU chose from the registry.
  *
  * Step 5 in the README: search https://www.npmjs.com, judge a package, install
  * it, and put its name here — exactly as you typed it after `npm install`.
+ * export const myPackage = "lodash";
  *
  * Anything at all, as long as it is not dayjs. The tests check that it is
  * really installed, not just named.
  *
  * @type {string}
  */
-export const myPackage = "REPLACE ME";
+export const myPackage = "lodash";
